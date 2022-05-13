@@ -1,0 +1,63 @@
+body {
+  background: url('images/bg_img.jpg') center center/cover no-repeat;
+}
+#info {
+  background: url("images/hearts.gif") no-repeat;
+}
+#info h1 {
+  filter: drop-shadow(2px 4px 2px white);
+}
+#info h4 {
+  backdrop-filter: blur(10px);
+  background: #ffffff24;
+}
+
+.pic-flip {
+  animation: flip 4s infinite;
+}
+
+.carousel {
+  width: 50%;
+}
+.carousel-item img {
+  height: 300px;
+  object-fit: contain;
+}
+
+.container > .card:nth-of-type(odd) {
+  animation: loading1 1s;
+}
+
+.container > .card:nth-of-type(even) {
+  align-self: flex-end;
+  animation: loading2 1s;
+}
+
+@keyframes flip {
+  0% {
+    transform: none;
+    opacity: 0;
+  }
+  100% {
+    transform: rotateY(360deg);
+    opacity: 1;
+  }
+}
+
+@keyframes loading1 {
+  from {
+    transform: translate(-300px, 0);
+  }
+  to {
+    transform: none;
+  }
+}
+
+@keyframes loading2 {
+  from {
+    transform: translate(450px, 0);
+  }
+  to {
+    transform: none;
+  }
+}

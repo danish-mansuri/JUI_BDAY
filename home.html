@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+
+    <title>Jui</title>
+    <link rel="icon" type="image/x-icon" href="./images/favicon.png" />
+    <link rel="stylesheet" href="style.css" />
+    <script>
+      let loggedin =
+        localStorage.getItem("log") !== null
+          ? JSON.parse(localStorage.getItem("log"))["loggedin"]
+          : "";
+      if (!loggedin) {
+        location.href = "index.html";
+      } else {
+        setTimeout(() => {
+          localStorage.removeItem("log");
+        }, 3600000);
+      }
+    </script>
+  </head>
+
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-danger">
+      <div class="container-fluid">
+        <div class="navbar-brand">
+          <h1 class="ps-2">Jui</h1>
+        </div>
+      </div>
+    </nav>
+
+    <section class="bg-danger text-center p-lg-5" id="info">
+      <h1 class="display-1 mb-4">Happy Birthday</h1>
+      <img
+        class="pic-flip"
+        src="images/Screenshot_2022-05-12-20-33-59-62_e89997cfbc61de957bd361c80974cf2b.JPG"
+        width="256"
+        alt="..."
+      />
+      <div class="p-4">
+        <h4 class="rounded p-2 pb-3 fst-italic">
+          <span style="color: yellow">14-05-2022</span> | Happy birthday to my
+          beautiful girlfriend. It doesn’t matter where in the world we are as
+          near or far, you’ll always be my twinkling star.
+        </h4>
+      </div>
+    </section>
+
+    <section class="d-flex">
+      <div
+        id="carouselCaptions"
+        class="carousel slide"
+        data-bs-ride="carousel"
+      >
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="images/Screenshot_2022-05-12-20-32-50-99_e89997cfbc61de957bd361c80974cf2b.JPG" class="d-block w-100" alt="..." />
+          </div>
+          <div class="carousel-item">
+            <img src="images/Screenshot_2022-05-12-20-33-34-11_e89997cfbc61de957bd361c80974cf2b.JPG" class="d-block w-100" alt="..." />
+          </div>
+          <div class="carousel-item">
+            <img src="images/Screenshot_2022-05-12-20-36-28-30_e89997cfbc61de957bd361c80974cf2b.JPG" class="d-block w-100" alt="..." />
+          </div>
+          <div class="carousel-item">
+            <img src="images/Screenshot_2022-05-12-20-35-36-60_e89997cfbc61de957bd361c80974cf2b.JPG" class="d-block w-100" alt="..." />
+          </div>
+          <div class="carousel-item">
+            <img src="images/Screenshot_2022-05-12-20-36-05-22_e89997cfbc61de957bd361c80974cf2b.JPG" class="d-block w-100" alt="..." />
+          </div>
+        </div>
+        <button
+          class="carousel-control-prev"
+          type="button"
+          data-bs-target="#carouselCaptions"
+          data-bs-slide="prev"
+        >
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button
+          class="carousel-control-next"
+          type="button"
+          data-bs-target="#carouselCaptions"
+          data-bs-slide="next"
+        >
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+
+      <div
+        id="carouselCaptions2"
+        class="carousel slide"
+        data-bs-ride="carousel"
+      >
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="images/Screenshot_2022-05-12-20-32-39-96_e89997cfbc61de957bd361c80974cf2b.JPG" class="d-block w-100" alt="..." />
+          </div>
+          <div class="carousel-item">
+            <img src="images/Screenshot_2022-05-12-20-32-10-56_e89997cfbc61de957bd361c80974cf2b.JPG" class="d-block w-100" alt="..." />
+          </div>
+          <div class="carousel-item">
+            <img src="images/Screenshot_2022-05-12-20-39-39-79_e89997cfbc61de957bd361c80974cf2b.JPG" class="d-block w-100" alt="..." />
+          </div>
+          <div class="carousel-item">
+            <img src="images/Screenshot_2022-05-12-20-40-19-66_e89997cfbc61de957bd361c80974cf2b.JPG" class="d-block w-100" alt="..." />
+          </div>
+          <div class="carousel-item">
+            <img src="images/Screenshot_2022-05-12-20-38-04-45_e89997cfbc61de957bd361c80974cf2b.JPG" class="d-block w-100" alt="..." />
+          </div>
+        </div>
+        <button
+          class="carousel-control-prev"
+          type="button"
+          data-bs-target="#carouselCaptions2"
+          data-bs-slide="prev"
+        >
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button
+          class="carousel-control-next"
+          type="button"
+          data-bs-target="#carouselCaptions2"
+          data-bs-slide="next"
+        >
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+    </section>
+
+    <h1 class="text-light bg-danger text-center p-3">Memories</h1>
+    <section class="d-flex flex-column container mt-3 mb-3" id="myGroup">
+      
+    </section>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
+    <script src="app.js"></script>
+  </body>
+</html>
