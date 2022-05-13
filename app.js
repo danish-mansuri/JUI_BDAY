@@ -43,7 +43,7 @@ window.addEventListener("load", (event) => {
   fetchData();
 });
 
+let bg_music = new Audio('song.mp3');
 window.addEventListener("mousemove", ()=>{
-  let bg_music = new Audio('song.mp3');
   bg_music.play(-1);
 })
