@@ -12,7 +12,7 @@ function display(data) {
   for (let i = 0; i < 7; i++) {
     let cards = document.getElementsByClassName("container")[0];
     cards.innerHTML += `<div class="card m-3 bg-danger" style="width: 18rem">
-    <img src="images/${data[i].pic}" class="card-img-top" alt="..." />
+    <img src="./images/${data[i].pic}" class="card-img-top" alt="..." />
     <div class="card-body">
       <div class="d-flex justify-content-between">
         <h5 class="display-4 text-light">${data[i].title}</h5>
